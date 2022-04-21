@@ -1,6 +1,6 @@
 package com.acemusicstore.validation;
 
-public class CustomerLogin implements Login {
+public class CustomerLogin {
 
 	public CustomerLogin() {
 		// TODO Auto-generated constructor stub

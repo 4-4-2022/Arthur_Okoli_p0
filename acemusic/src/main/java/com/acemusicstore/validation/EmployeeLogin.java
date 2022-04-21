@@ -1,6 +1,6 @@
 package com.acemusicstore.validation;
 
-public class EmployeeLogin implements Login {
+public class EmployeeLogin {
 
 	private String username;
 	private String password;

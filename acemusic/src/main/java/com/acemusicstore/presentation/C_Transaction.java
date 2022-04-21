@@ -4,6 +4,8 @@ import com.acemusicstore.CloseStore;
 import com.acemusicstore.Recording;
 import com.acemusicstore.customer.*;
 import com.acemusicstore.dbaccess.dbConnectImpl;
+import com.acemusicstore.validation.UserInput;
+
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -40,10 +42,14 @@ public class C_Transaction {
 	
 	public int welcome() {
 		Scanner s = new Scanner(System.in);
-		System.out.println("Welcome to Ace's Music Store. Please select 1) Login 2) Create a new Account 3) Employee login \n");
-		int route = s.nextInt();
-		return route;
+		System.out.println("Welcome to Ace's Music Store. Please select 1) Exit 2) Register a new Account 3) Login");
+		s.nextInt();
+		int input = s.nextInt();
+		return UserInput.testNumWelcome(input);
 	}
+	
+		
+		
 	
 	public boolean regAccount() {
 		Scanner s = new Scanner(System.in);

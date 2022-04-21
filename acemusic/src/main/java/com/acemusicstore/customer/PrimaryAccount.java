@@ -12,6 +12,7 @@ public class PrimaryAccount {
 	public Integer id;
 	public String pass;
 	public String name;
+	public String user;
 	public String address;
 	public String state;
 	private boolean hasSecondary;
@@ -21,9 +22,53 @@ public class PrimaryAccount {
 		// TODO Auto-generated constructor stub
 	}
 	
+	public PrimaryAccount(String name, String user, String address, String state, String music_pref) {
+		 setUsername(name);
+		 setPassword(pass);
+		 setPassword(pass);
+	}
+	
+	
+	public void setUsername(String name) {
+		this.name = name;
+	}
+	
+	public void setPassword(String pass) {
+		this.pass = pass;
+	}
+	
+	public void setUser(String user) {
+		this.user = user;
+	}
+	
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
+	
+	public void setState(String state) {
+		this.state = state;
+	}
+	
+	
+	public String getUsername() {
+		return this.name;
+	}
+	
+	
+	public String getPassword() {
+		return this.pass;
+	}
+	
+	public String getUser() {
+		return this.user;
+	}
+	
 	public static void registerAccount(String name, String pass, String address, String state) {
 		
 	}
+	
+	
 	
 	protected static Recording purchase() {
 		Wallet w = new Wallet();

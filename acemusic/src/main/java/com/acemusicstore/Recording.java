@@ -48,13 +48,17 @@ public class Recording {
 							{"7", "Masego", "Studying Abroad", "Jazz Fusion", "Record", "2020", "9.99", "FKJ"},
 							{"8", "Sade", "Soldier of Love", "Smooth Jazz", "Mixtape", "2011", "15.50", "Mike Pela"}
 						};
+	}
 	
+		/*
+		 * 
 		Connection postgres;
 		PreparedStatement stmt = null;
 		postgres = dbConnectImpl.connect();
 		try {
 			stmt = postgres.prepareStatement(SQLinsert);
 		
+		 
 		for (int i=0; arr.length <1; i++) {
 			for (String[] e : arr) {
 				stmt.setInt(1, Integer.parseInt(e));
@@ -67,7 +71,9 @@ public class Recording {
 				stmt.setString(8, e);
 				stmt.execute();
 				System.out.println(arr[i]);
-			}
+			} 
+			
+			
 		}
 		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
@@ -78,6 +84,8 @@ public class Recording {
 			}
 	
 	}
+	*
+	*/
 	
 	public ArrayList <Recording> viewDb() {
 		Connection conn;

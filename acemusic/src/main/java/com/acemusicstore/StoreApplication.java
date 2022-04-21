@@ -2,6 +2,8 @@ package com.acemusicstore;
 import java.util.Scanner;
 import com.acemusicstore.customer.PrimaryAccount;
 import com.acemusicstore.customer.SecondaryAccount;
+import com.acemusicstore.presentation.C_Transaction;
+import com.acemusicstore.presentation.CustomerReg;
 import com.acemusicstore.*;
 
 
@@ -10,15 +12,26 @@ public class StoreApplication {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	
+		
+		
+		
 		//Welcome, User input to continue - Y or N?
-		Scanner s = new Scanner(System.in);
-		System.out.println("Welcome to Ace Music Store. To continue please enter Yes. To exit enter No");
-		String input = s.nextLine();
+		//Scanner s = new Scanner(System.in);
+		System.out.println("Welcome to Ace Music Store \n");
+		//String input = s.nextLine();
+		C_Transaction ctrans = new C_Transaction();
+		int input = ctrans.welcome();
+		switch (input) {
+		case 1:
+			System.exit(0);
+		case 2:
+			CustomerReg.registerCust();
+		case 3:
+		}
 		
 		
 		
-		
+		/*
 		//Initialize Db
 		if (input.equalsIgnoreCase("Yes")) {
 		Record record = new Record();
@@ -28,7 +41,7 @@ public class StoreApplication {
 			CloseStore.end(s);
 		}
 		
-		//Login - Employee, Customer or if this is a potential new User?
+		//UserInput - Employee, Customer or if this is a potential new User?
 		//Customer login, Employee login, or New Customer registration
 		
 		/*Customer options
